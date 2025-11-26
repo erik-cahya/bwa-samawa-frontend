@@ -1,6 +1,9 @@
+import Header from "@/components/Header";
+
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex flex-col gap-y-16">
+      <Header />
       test
     </main>
   );

@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-slide-content {
+    @apply bg-light1 rounded-3xl absolute top-1/2 z-10 p-5 max-w-[305px] transition-all opacity-0;
+    left: 100px;
+    transition-duration: 1000ms;
+
+    transform: translateY(-45%) rotate3d(1, 0, 0, -20deg);
+}
+
+.swiper-slide-active .card-slide-content {
+    @apply opacity-100;
+    transform: translateY(-50%) rotate3d(1, 1, 1, 0deg);
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    z-index: 20;
+    width: 100%;
+    height: 30px;
+}
+
+/* .cube-wrapper {
+  transition: all 0.7s ease-in-out;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+  opacity: 0;
+}
+
+.cube {
+  transition: all 0.7s ease-in-out;
+
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(-84deg) rotateY(0deg)
+    rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
+    skewY(0deg);
+
+  margin: auto;
+  position: relative;
+  height: 200px;
+  width: 200px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.cube-wrapper:hover {
+  opacity: 1;
+}
+.cube-wrapper:hover .cube {
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(0deg) rotateY(0deg)
+    rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg)
+    skewY(0deg);
+}
+
+.face {
+  position: absolute;
+  box-sizing: border-box;
+  line-height: 200px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0.9;
+  border: 1px solid #000;
+  color: #000;
+  font-weight: bold;
+}
+
+.front {
+  -webkit-transform: translateZ(100px);
+  transform: translateZ(100px);
+  background-color: #00d7ff;
+}
+
+.back {
+  -webkit-transform: translateZ(-100px) rotateY(180deg);
+  transform: translateZ(-100px) rotateY(180deg);
+  background-color: #e86836;
+} */
