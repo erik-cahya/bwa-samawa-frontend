@@ -1,7 +1,7 @@
 import React from "react";
 import { TPackage, TShow } from "./types";
 import Slider from "../Slider";
-import { getData } from "./actions";
+import { getData } from "@/components/WeddingPakcages/actions";
 
 import Pinpoint from "@/assets/images/pinpoint.svg";
 import Popular from "@/assets/images/popular.svg";
@@ -17,7 +17,6 @@ type PropsWeddingPakcageWrapper = {
 };
 
 function WeddingPackageSlider({ data }: { data: TPackage[] }) {
-   console.log(data);
    return (
       <div className="relative">
          <Slider
@@ -42,7 +41,7 @@ function WeddingPackageSlider({ data }: { data: TPackage[] }) {
                      <div className="card-slide-content flex flex-col items-start gap-y-5">
                         <span className="bg-color1 rounded-full text-light1 inline-flex gap-x-2 items-center text-sm py-1 px-3 uppercase">
                            <Popular />
-                           Popular
+                           {`${slide.isPopular === 1 ? 'Popular' : 'Not Popular'}`}
                         </span>
                         <span className="flex flex-col gap-y-1">
                            <h6 className="text-[28px] font-bold">
